@@ -4,5 +4,9 @@ import { Provider } from 'react-redux';
 import { createStore, applyMiddleware } from 'redux';
 import App from './App';
 
-const store = createStore(() => [], {}, applyMiddleWare());
-ReactDOM.render(<App />, document.getElementById('root'));
+const store = createStore(() => [], {}, applyMiddleware());
+
+ReactDOM.render(
+  <App />, 
+  document.getElementById('root')
+);
