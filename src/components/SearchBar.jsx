@@ -15,13 +15,20 @@ class SearchBar extends Component{
     const {fetchEvents, city} = this.props;
 
     this.setState({q: e.target.value});
-    fetchEvents(city, this.state.q);
+    
+    const { q } = this.state;
+
+    if (q.length > 0) {
+      fetchEvents(city, q);
+    }
   }
 
   componentDidMount() {
-    const {fetchCity, fetchEvents, city} = this.props;
+    this.props.fetchCity();
+  }
 
-    fetchCity();
+  componentDidUpdate() {
+    const {city, fetchEvents} = this.props;
     fetchEvents(city);
   }
 

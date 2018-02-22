@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import SearchBar from './components/SearchBar';
-
+import EventsList from './components/EventsList';
 
 class App extends Component {
 
@@ -9,6 +9,7 @@ class App extends Component {
     return (
       <div className="App">
         <SearchBar />
+        <EventsList />
       </div>
     );
   }

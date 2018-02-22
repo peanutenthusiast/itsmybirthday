@@ -9,12 +9,12 @@ export const fetchEvents = (city = "", q = "") => async dispatch => {
   }
 
   if (q.length > 0) {
-    options.param.q = q;
+    options.params.q = q;
   }
 
   const res = await axios.get('https://gentle-tor-30343.herokuapp.com/events', options);
-  
-  dispatch({type: FETCH_EVENTS, payload: res});
+
+  dispatch({type: FETCH_EVENTS, payload: res.data.eventsList});
 }
  
 export const fetchCity = () => async dispatch => {
