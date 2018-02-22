@@ -1,10 +1,9 @@
 import React, { Component } from 'react';
-import { connect } from 'react-redux';
 import SearchBar from './components/SearchBar';
 
-import * as actions from './actions';
 
 class App extends Component {
+
 
   render() {
     return (
@@ -15,6 +14,4 @@ class App extends Component {
   }
 }
 
-
-
-export default connect(null, actions)(App);
+export default App;
