@@ -34,12 +34,21 @@ class SearchBar extends Component{
 
   render() {
     return (
-      <input
-        placeholder="What's your mood?"
-        className="form-control"
-        value={this.state.q}
-        onChange={this.onInputChange}
-      />
+      <nav>
+        <div className="nav-wrapper">
+          <form>
+            <div className="input-field">
+              <input 
+                id="search" type="search" required 
+                placeholder="What's your mood?"
+                className="form-control"
+                value={this.state.q}
+                onChange={this.onInputChange}
+              />
+            </div>
+          </form>
+        </div>
+      </nav>
     )
   }
 }
