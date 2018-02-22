@@ -1,25 +1,30 @@
 import React, { Component } from 'react';
 
+
 class Event extends Component {
   beautifyDate(date) {
-    let startTime = new Date(date);
+    let startTime = new Date(date.local);
 
-    return startTime.toLocaleDateString();
+    return startTime.toLocaleDateString('en-US', {hour: 'numeric', timeZone: date.timeZone});
   }
 
   render() {
-    const { name, image, url, date } = this.props;
-    const startTime = this.beautifyDate(date);
+    const { name, image, url, dateObj } = this.props;
+
+    const startTime = this.beautifyDate(dateObj);
 
     return ( 
-      <div className="col-md-3">
-        <h4><a href={url}>{name}</a></h4>
-
-        <div className="embed-responsive embed-responsive-16by9">
-            <img src={image} type="event/jpg" />
-        </div>
-        <div className="Event-info">
-          <p>Starts time: {startTime}</p>
+      <div className="row">
+        <div className="col s12 m6">
+          <div className="card center-align">
+            <div className="card-image responsive-image">
+              <img src={image}/>
+            </div>
+            <div className='card-content'>
+              <span className="card-title"><a href={url}>{name}</a></span>
+              <p>{startTime}</p>
+            </div>
+          </div>
         </div>
       </div>
     )

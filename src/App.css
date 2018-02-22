@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css?family=Lobster');
+
+body {
+  font-family: 'Lobster', sans-serif;
+  font-size: 1em;
+  background-color: #662833;
+}
+
+.container {
+  background-image: url('./graphics/bday_cake.png');
+  background-size: 1.5%;
+    display: flex;
+  position: absolute;
+  left: 10%;
+  width: 80%;
+  flex-direction: column;
+}
+
+.container .row {
+  margin: 0 auto;
+}
+
+
+.events-list .row {
+  align-self: center;
+}
+
+.container .nav-wrapper {
+  align-self: flex-start;
+}
+
+.container .row{
+  align-self: flex-end;
+}
+img {
+  border-radius: 30px;
+}
+
+.card {
+  border-radius: 30px;
+}

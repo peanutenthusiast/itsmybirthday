@@ -6,17 +6,22 @@ class EventsList extends Component{
   renderEvents() {
     const {events} = this.props;
 
-    return events.map((e) => {
+    if (events.length > 0) {
+      return events.map((e) => {
+        return(
+          <Event
+            key={e.id}
+            name={e.name.text}
+            image={e.logo.url}
+            url={e.url}
+            dateObj={e.start}
+          />
+        )
+      })} else {
       return(
-        <Event
-          key={e.id}
-          name={e.name.text}
-          image={e.logo.url}
-          url={e.url}
-          date={e.start.local}
-        />
+        <p>Loading...</p>
       )
-    })
+    }
   }
 
   render() {
