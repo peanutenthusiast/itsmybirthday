@@ -12,7 +12,7 @@ class SearchBar extends Component{
   }
 
   updateQ(e){
-    const {value} = e.target;
+    const { value } = e.target;
     const { city, fetchEvents } = this.props;
     this.setState({q: e.target.value});
     fetchEvents(city, value);
@@ -33,7 +33,7 @@ class SearchBar extends Component{
     return (
       <nav>
         <div className="nav-wrapper row">
-          <div className="input-field col m4">
+          <div className="input-field">
             <input 
               id="search" type="search" required 
               placeholder="What's your mood?"

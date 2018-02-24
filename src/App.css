@@ -36,8 +36,9 @@ body {
 .container .row {
   align-self: flex-start;
 }
-img {
+.card-image {
   border-radius: 30px;
+  max-height: 40%;
 }
 
 .card {

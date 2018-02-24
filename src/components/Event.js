@@ -18,7 +18,7 @@ class Event extends Component {
         <div className="col s12 m4">
           <div className="card hoverable">
             <div className="card-image responsive-image">
-              <img src={image}/>
+              <img className="img-responsive" src={image}/>
             </div>
             <div className='card-content'>
               <h4 className="card-title truncate"><a href={url}>{name}</a></h4>
