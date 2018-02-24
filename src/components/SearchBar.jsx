@@ -12,6 +12,7 @@ class SearchBar extends Component{
   }
 
   onInputChange(e){
+    debugger;
     const {fetchEvents, city} = this.props;
 
     this.setState({q: e.target.value});

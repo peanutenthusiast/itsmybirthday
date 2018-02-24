@@ -20,7 +20,6 @@ body {
   margin: 0 auto;
 }
 
-
 .events-list .row {
   align-self: center;
 }
@@ -38,4 +37,10 @@ img {
 
 .card {
   border-radius: 30px;
+}
+
+@media only screen and (max-width: 425px) {
+  .card-title {
+    font-size: 1em;
+  }
 }

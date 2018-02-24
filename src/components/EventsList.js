@@ -14,7 +14,8 @@ class EventsList extends Component{
             name={e.name.text}
             image={e.logo.url}
             url={e.url}
-            dateObj={e.start}
+            startObj={e.start}
+            endObj={e.end}
           />
         )
       })} else {
@@ -26,7 +27,7 @@ class EventsList extends Component{
 
   render() {
     return (
-      <div className="event-list">
+      <div className="event-list row">
         {this.renderEvents()}
       </div>
     )

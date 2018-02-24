@@ -3,30 +3,29 @@ import React, { Component } from 'react';
 
 class Event extends Component {
   beautifyDate(date) {
-    let startTime = new Date(date.local);
+    let time = new Date(date.local);
 
-    return startTime.toLocaleDateString('en-US', {hour: 'numeric', timeZone: date.timeZone});
+    return time.toLocaleDateString('en-US', {hour: 'numeric', timeZone: date.timeZone});
   }
 
   render() {
-    const { name, image, url, dateObj } = this.props;
+    const { name, image, url, startObj, endObj } = this.props;
 
-    const startTime = this.beautifyDate(dateObj);
+    const startTime = this.beautifyDate(startObj);
+    const endTime = this.beautifyDate(endObj);
 
     return ( 
-      <div className="row">
-        <div className="col s12 m6">
-          <div className="card center-align">
+        <div className="col s12 m4">
+          <div className="card hoverable">
             <div className="card-image responsive-image">
               <img src={image}/>
             </div>
             <div className='card-content'>
               <span className="card-title"><a href={url}>{name}</a></span>
-              <p>{startTime}</p>
+              <p>{startTime}-{endTime}</p>
             </div>
           </div>
         </div>
-      </div>
     )
   }
 }
