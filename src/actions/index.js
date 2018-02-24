@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { FETCH_EVENTS, FETCH_CITY } from './types';
+import { FETCH_EVENTS, FETCH_CITY, UPDATE_CITY } from './types';
 
 export const fetchEvents = (city = "", q = "") => async dispatch => {
   let options = {params: {}}
@@ -23,4 +23,8 @@ export const fetchCity = () => async dispatch => {
   dispatch({type: FETCH_CITY, payload: res.data.city});
 
 };
- 
+
+export const updateCity = (text) => async dispatch => {
+
+  dispatch({type: UPDATE_CITY, payload: text});
+}

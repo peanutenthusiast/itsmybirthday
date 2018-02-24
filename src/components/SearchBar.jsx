@@ -8,46 +8,40 @@ class SearchBar extends Component{
 
     this.state = {q: ''};
 
-    this.onInputChange = this.onInputChange.bind(this);
+    this.updateQ = this.updateQ.bind(this);
   }
 
-  onInputChange(e){
-    debugger;
-    const {fetchEvents, city} = this.props;
-
+  updateQ(e){
+    const {value} = e.target;
+    const { city, fetchEvents } = this.props;
     this.setState({q: e.target.value});
-    
-    const { q } = this.state;
-
-    if (q.length > 0) {
-      fetchEvents(city, q);
-    }
+    fetchEvents(city, value);
   }
 
   componentDidMount() {
     this.props.fetchCity();
   }
 
-  componentDidUpdate() {
-    const {city, fetchEvents} = this.props;
+  componentWillReceiveProps(nextProps) {
+    const {city, fetchEvents} = nextProps;
+
     fetchEvents(city);
   }
+
 
   render() {
     return (
       <nav>
-        <div className="nav-wrapper">
-          <form>
-            <div className="input-field">
-              <input 
-                id="search" type="search" required 
-                placeholder="What's your mood?"
-                className="form-control"
-                value={this.state.q}
-                onChange={this.onInputChange}
-              />
-            </div>
-          </form>
+        <div className="nav-wrapper row">
+          <div className="input-field col m4">
+            <input 
+              id="search" type="search" required 
+              placeholder="What's your mood?"
+              className="form-control"
+              value={this.state.q}
+              onChange={this.updateQ}
+            />
+          </div>
         </div>
       </nav>
     )

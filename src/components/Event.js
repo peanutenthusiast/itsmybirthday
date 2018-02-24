@@ -21,7 +21,7 @@ class Event extends Component {
               <img src={image}/>
             </div>
             <div className='card-content'>
-              <span className="card-title"><a href={url}>{name}</a></span>
+              <h4 className="card-title truncate"><a href={url}>{name}</a></h4>
               <p>{startTime}-{endTime}</p>
             </div>
           </div>

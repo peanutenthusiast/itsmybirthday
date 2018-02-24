@@ -5,17 +5,17 @@ import Event from './Event';
 class EventsList extends Component{
   renderEvents() {
     const {events} = this.props;
-
     if (events.length > 0) {
-      return events.map((e) => {
+      console.log(events);
+      return events.map((event) => {
         return(
           <Event
-            key={e.id}
-            name={e.name.text}
-            image={e.logo.url}
-            url={e.url}
-            startObj={e.start}
-            endObj={e.end}
+            key={event.id}
+            name={event.name.text}
+            image={event.logo.url}
+            url={event.url}
+            startObj={event.start}
+            endObj={event.end}
           />
         )
       })} else {
