@@ -14,8 +14,10 @@ I implemented a number of technologies--Node.js, React.js, Google's Materialize 
 As the site loads, it retrieves your approximate city/location via the IP API, and sends a request to the Node.js specific endpoint, which upon success from the Eventbrite API, sends matching events back to the client-side. The client-side then renders the events, and as you type, your search queries are processed to re-render matching results.
 
 ## STRETCH GOALS
---Implementing Twilio's SMS API to send links to your friends
+--Implementing Mapbox technologies to render events around a user's current location
+
 --Registering saved events
+
 --Rendering a user's events and tickets through MyEvents component
 etc.
 
