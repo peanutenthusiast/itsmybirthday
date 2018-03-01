@@ -1,14 +1,19 @@
-@import url('https://fonts.googleapis.com/css?family=Lobster');
+@import url('https://fonts.googleapis.com/css?family=PT+Sans+Narrow');
 
 body {
-  font-family: 'Lobster', sans-serif;
+  font-family: 'PT Sans Narrow', sans-serif;
   font-size: 1em;
-  background-color: #662833;
+  background: #e0e0e0;
+  color: black;
 }
 
+/*.nav-wrapper {
+  border-radius: 10px;
+}*/
+
 .container {
-  background-image: url('./graphics/bday_cake.png');
-  background-size: 1.5%;
+  background-image: url('./graphics/Birthday_Candles.jpg');
+  background-repeat: no-repeat;
   display: flex;
   position: absolute;
   left: 10%;
@@ -17,9 +22,17 @@ body {
   border-radius: 10px;
 }
 
-.card-title {
-  transform: scale(1.05);
+.nav-wrapper input {
+  color: black;
 }
+
+.input-field input[type=text] {
+   color: black !important;
+}
+
+/*.card-title {
+  transform: scale(1.05);
+}*/
 
 .container .row {
   margin: 0 auto;
@@ -46,7 +59,11 @@ body {
 }
 
 @media only screen and (max-width: 425px) {
+  .container {
+    width: 100%;
+  }
   .card-title {
     font-size: 1em;
   }
 }
+

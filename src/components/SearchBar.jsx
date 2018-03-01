@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { fetchEvents, fetchCity } from '../actions/index';
 
-class SearchBar extends Component{
+class SearchBar extends Component {
   constructor(props) {
     super(props);
 
@@ -32,10 +32,11 @@ class SearchBar extends Component{
   render() {
     return (
       <nav>
-        <div className="nav-wrapper row">
+        <div className="nav-wrapper orange accent-2">
           <div className="input-field">
             <input 
-              id="search" type="search" required 
+              id="search" type="search" required
+              className="black-text"
               placeholder="What's your mood?"
               className="form-control"
               value={this.state.q}

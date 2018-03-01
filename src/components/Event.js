@@ -15,8 +15,8 @@ class Event extends Component {
     const endTime = this.beautifyDate(endObj);
 
     return ( 
-        <div className="col s12 m4">
-          <div className="card hoverable">
+        <div className="col s6 m4">
+          <div className="card hoverable grey lighten-3">
             <div className="card-image responsive-image">
               <img className="img-responsive" src={image}/>
             </div>
